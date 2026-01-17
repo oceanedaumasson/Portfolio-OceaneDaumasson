@@ -11,20 +11,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="home-page">
     <my-nav></my-nav>
 
     <div class="home">
-        <!--<h1 class="title">OCEANE DAUMASSON</h1>-->
-        <img src="images/title.SVG" class="title">
+        <img src="images/title1.svg" class="title">
         <img src="images/header.JPG" class="header-image">
     </div>
 
     <main>
-        <section class="about">About Me</section>
-        <section class="projects">Current Projects?</section>
-        <section class="contact">Contact Me!</section>
-     </main>
+        <section id="about_id" class="about-section">
+            <div class="about-content">
+                <img src="images/aboutTitle.svg" class="about-title">
+                <p>I’m Oceane, a Computer Science and Computation Arts student at Concordia University in Montreal, exploring the space where technology meets creativity.</p>
+                <p>I’m interested in interactive media, design and game development. I like learning by making, and refining ideas until they start to feel right. Lately, I’ve been interested in themes of memory and childhood, and trying to explore how small, everyday moments can feel meaningful in digital spaces, especially through color and mood.</p>   
+            </div>
+            <div></div> <!--Empty right column-->
+        </section>
+               
+        <hr>
+        
+        <section id="contact_id" class="contact-section"> <!-- Check this div_id for all-->
+            <div class="contact-content">
+                <h3 class="contact">CONTACT INFORMATION</h3>
+                
+                <div class="contact-item">
+                    <a href="mailto:oceane.daumasson@gmail.com">oceane.daumasson@gmail.com</a>
+                    <img src="images/mailLogo.svg" class="logo">
+                </div>
+                <div class="contact-item">
+                     <a href="https://www.linkedin.com/in/oceane-daumasson">LinkedIn</a>
+                    <img src="images/linkedInLogo.svg" class="logo">
+                </div>
+                <div class="contact-item">
+                     <a href="https://github.com/oceanedaumasson">Github</a>
+                    <img src="images/githubLogo.svg" class="logo">
+                </div>
+            </div>   
+        </section>     
+    </main>
 
     <script src="js/nav.js"></script>
 </body>

@@ -1,15 +1,65 @@
+html { 
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px; 
+}
+
+body {
+    font-family: "Avenir", Helvetica, sans-serif;
+    margin: 0;
+}
+
+body#home-page {
+    background-color: #b63f75; 
+    color: #f6f4f2;
+}
+
+body.work-pages {
+    background-color: #f6f4f2;
+    color: #b63f75;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+a { 
+    color:#f6f4f2;
+    font: Geneva;
+    font-size: 1.3vw;
+    margin: 5px;
+ }
+
+/*Horizontal line for the contact section*/
+hr { border-top: 1px solid #f6f4f2; }
+
+/*---- NAVBAR ----*/
 .top-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    background-color: #b63f75;
+    padding-bottom: 4px;
 }
 
 .top-bar a {
     font-size: 1rem;
     color: #f6f4f2;
     text-decoration: none;
+}
+
+.light-nav {
+    background-color: #f6f4f2;
+}
+
+.light-nav a{
+    color: #b63f75;
 }
 
 .nav-inner {
@@ -26,28 +76,256 @@
     gap: 48px
 }
 
-body {
-    background-color: #b63f75;
-    color: #f6f4f2;
-    font-family: "Libre Baskerville", "Times New Roman", Times, serif;
-    margin: 0;
-}
-
-/*Home page layout, keeps header image at bottom*/
+/*---- HOME SECTION ----*/
 .home {
     min-height: 100vh;
-    padding-top: 20px;
+    padding-top: 5px;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .title {
     display: block;
-    margin-top: 60px;
+    margin: 80px auto 0;
+    position: relative;
+    z-index: 2;
 }
 
-/*Fit cover image to full page length*/
 .header-image {
     width: 100vw;
     height: auto;
     display: block;
+    margin-top: -17.1%; /* Controls header text and image overlap */
+    position: relative;
+    z-index: 1;
+}
+
+/*---- ABOUT SECTION ----*/
+.about-section {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    margin: 130px 0;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-title {
+    width: 70%;
+}
+
+.about-content p {
+    padding: 10px 70px
+}
+
+/*---- CONTACT SECTION ----*/
+.contact-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    text-align: right;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: flex-end;
+}
+
+.logo {
+    width: 15px;
+    height: 14px;
+}
+
+/*---- MY WORK PAGE ----*/
+.work-titles {
+    font-size: 3vw;
+    margin-top: 100px;
+    text-align: center;
+    color: #b63f75;
+    margin-bottom: 0;
+}
+
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 0;
+    padding: 10px 60px;
+    justify-content: center; /* Centers the entire grid */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* To keep work titles centered over each image */
+.work-item {
+    position: relative;
+    display: block;
+}
+
+.work-item img {
+    width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers image in its cell */
+    transition: filter 0.3s;
+}
+
+/* Darkens image on hover */
+.work-item:hover img{
+    filter: brightness(0.6);
+}
+
+#mag-cover img {
+    width: 50%;
+}
+
+#color-exp img {
+    width: 95%;
+}
+
+.work-item-title {
+    position: absolute;
+    color: #f6f4f2;
+    font-size: 2vw;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers text */
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.work-item:hover .work-item-title {
+    opacity: 1;
+}
+
+
+/*---- EACH WORK PAGE ----*/
+.work-page-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 50px;
+}
+
+.work-page-text {
+    margin: 180px 0;
+    padding: 80px 50px;
+    border-right: 2px solid #b63f75;
+    color: #b63f75;
+}
+
+.work-page-text a{
+    font-size: 1.3vw;
+    color: #b63f75;
+    font-weight: bold;
+}
+
+.work-page-images img {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.work-page1-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    padding: 60px 40px;
+}
+
+.work-page1-images img {
+    width: 100%;
+}
+
+.work-page1-images video {
+    display: block;
+    margin: auto;
+    width: 80%;
+    grid-column: 1 / -1;
+}
+
+#bakegame4 {
+    margin-top: 10px;
+    grid-column: 1 / 3; /* Spans both columns */
+}
+
+.work-page2-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px 20px;
+    padding: 60px 40px;
+    justify-items: center;
+}
+
+#finngame {
+    width: 80%;
+}
+
+.work-page2-images video {
+    width: 80%;
+    grid-column: 1 / -1;
+}
+
+.work-page3-images img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 10px 0;
+}
+
+.work-page4-images {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+}
+
+.work-page4-images img {
+    width: 70%;
+}
+
+.work-page5-images {
+    display: grid;
+    gap: 20px;
+    padding: 20px 40px 40px;
+    justify-items: center;
+}
+
+.work-page5-images img {
+    width: 100%;
+}
+
+#mag4 {
+    width: 60%;
+    grid-column: 1 / 4;
+}
+
+.work-page6-images {
+    margin-top: 70px;
+    display: grid;
+    justify-items: center;
+}
+
+.work-page6-images img {
+    width: 90%;
+}
+
+.work-nav {
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.next, .prev {
+    color: #b63f75;
+    text-decoration: none;
+    padding: 20px;
 }
 

@@ -173,8 +173,15 @@ hr { border-top: 1px solid #f6f4f2; }
     width: 85%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Centers image in its cell */
+    margin: 0 auto; /* Centers image */
     transition: filter 0.3s;
+}
+
+.otherwork-item img {
+    width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers image */
 }
 
 /* Darkens image on hover */

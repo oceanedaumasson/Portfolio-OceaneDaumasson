@@ -234,6 +234,11 @@ hr { border-top: 1px solid #f6f4f2; }
     font-weight: bold;
 }
 
+#small-link {
+        font-size: 1.5vw;
+
+}
+
 .work-page-images img {
     display: block;
     margin: auto;

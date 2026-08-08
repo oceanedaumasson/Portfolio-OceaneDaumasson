@@ -7,7 +7,7 @@ class MyNav extends HTMLElement {
         const navClass = isWorkPage ? 'top-bar light-nav' : 'top-bar';
 
     this.innerHTML = `
-            <nav class="${navClass}"> 
+            <nav class="${navClass}">  
                 <div class="nav-inner">
                     <a href="${prefix}index.html" class="nav-left">OD</a>
 

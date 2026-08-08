@@ -320,7 +320,7 @@ hr {
     gap: 60px;
     max-width: 1300px;
     margin: 50px auto 0;
-    padding: 0 40px;
+    padding: 0 40px 100px;
     align-items: start;
 }
 
@@ -444,18 +444,4 @@ hr {
     text-decoration: none;
     font-size: 1rem;
     padding: 6px 10px;
-}
-
-/*---- WORK PAGE NAVIGATION ----*/
-.work-nav {
-    display: flex; 
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 30px;
-}
-
-.next, .prev {
-    color: #b63f75;
-    text-decoration: none;
-    padding: 20px;
 }

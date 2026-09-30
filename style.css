@@ -94,7 +94,7 @@ hr {
     width: 100vw;
     height: auto;
     display: block;
-    margin-top: -17.1%; /* Controls header text and image overlap */
+    margin-top: -17.1%;
     position: relative;
     z-index: 1;
 }
@@ -102,11 +102,12 @@ hr {
 /*---- ABOUT SECTION ----*/
 .about-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 80px 0 210px;
+    grid-template-columns: minmax(0, 560px) auto;
+    justify-content: center;  
+    align-items: center;
+    gap: 60px;
+    margin: 100px 0 120px;
     padding: 100px 80px;
-    align-items: start;
-    gap: 80px;
 }
 
 .about-content {
@@ -125,6 +126,12 @@ hr {
     margin-bottom: 32px;
 }
 
+.about-image {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
 
 /* ---- SELECTED WORK SECTION ---- */
 #selected-work_id {

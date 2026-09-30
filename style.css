@@ -24,8 +24,7 @@ h1, h3 {
 
 a { 
     color:#f6f4f2;
-    font: Geneva;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     margin: 5px;
  }
 
@@ -43,6 +42,9 @@ hr {
     z-index: 1000;
     background-color: #b63f75;
     padding-bottom: 4px;
+    border-top: 1px solid #f6f4f2;
+    border-bottom: 1px solid #f6f4f2;
+
 }
 
 .top-bar a {
@@ -53,10 +55,12 @@ hr {
 
 .light-nav {
     background-color: #f6f4f2;
+    border-top: 1px solid #401103;
+    border-bottom: 1px solid #401103;
 }
 
 .light-nav a{
-    color: #1B154D;
+    color: #401103;
 }
 
 .nav-inner {
@@ -74,7 +78,7 @@ hr {
 /*---- HOME SECTION ----*/
 .home {
     min-height: 100vh;
-    padding-top: 5px;
+    padding-top: 55px;
     position: relative;
     overflow-x: hidden;
 }
@@ -128,18 +132,8 @@ hr {
 }
 
 .selected-work-section {
-    padding: 80px 50px 60px;
-}
-
-.view-all-link {
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 0;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
+    background-color: #f6f4f2;
+    padding: 80px 50px 100px;
 }
 
 .selected-work-heading {
@@ -147,91 +141,96 @@ hr {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: normal;
-    opacity: 1;
     margin-bottom: 40px;
+    color: #401103;
 }
 
 .selected-work-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    padding: 0 20px;
+    gap: 50px 90px;    
+    margin: 0 auto;
 }
 
 .sw-card {
-    position: relative;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.08);
-    padding: 36px 40px;
-    min-height: 220px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     text-decoration: none;
-    color: #f6f4f2;
+    color: #401103;
 }
 
 .sw-card::before {
     content: '';
-    position: absolute;
-    inset: 0;
+    aspect-ratio: 16 / 10;
     background-image: var(--card-bg);
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transition: opacity 0.5s;
-    z-index: 0;
-}
-
-.sw-card > * {
-    position: relative;
-    z-index: 1;
+    transition: filter 0.3s;
 }
 
 .sw-card:hover::before {
-    opacity: 0.28;
-}
-
-.sw-desc, .sw-tools {
-    transition: opacity 0.15s;
-}
-
-.sw-card:hover .sw-desc,
-.sw-card:hover .sw-tools {
-    opacity: 0;
+    filter: brightness(0.6);
 }
 
 .sw-title {
-    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0;
-    color: #f6f4f2;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.sw-card:hover .sw-title {
+    color: #b63f75;
 }
 
 .sw-desc {
     font-size: 0.85rem;
     line-height: 1.7;
     opacity: 0.75;
-    flex: 1;
     margin: 0;
 }
 
 .sw-tools {
-    font-family: 'Playfair Display', serif;
     font-size: 0.65rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     opacity: 0.5;
-    margin-top: 4px;
+}
+
+.view-all-link {
+    display: table;
+    margin: 80px auto 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #401103;
+    padding: 10px;
+    border: 1px solid #401103;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.view-all-link:hover {
+    background-color: #401103;
+    color: white;
+}
+
+/*---- SECTION DIVIDER----*/
+.divider {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /*---- CONTACT SECTION ----*/
 .contact-section {
     display: flex;
     justify-content: flex-end;
-    padding: 0 20px;
-    margin-bottom: 40px;
+    padding: 0 30px;
+    margin-bottom: 20px;
 }
 
 .contact-content {
@@ -257,7 +256,7 @@ hr {
     font-size: 3vw;
     margin-top: 100px;
     text-align: center;
-    color: #1B154D;
+    color: #401103;
     margin-bottom: 0;
 }
 
@@ -266,7 +265,7 @@ hr {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     max-width: 1100px;
-    padding: 10px 60px;
+    padding: 40px 60px;
     margin: 0 auto;
 }
 
@@ -276,7 +275,7 @@ hr {
     display: block;
     aspect-ratio: 4 / 3;
     overflow: hidden;
-    background-color: rgba(27,21,77,0.05);
+    background-color: #1b154d0d;
 }
 
 .work-item img {
@@ -313,6 +312,8 @@ hr {
 }
 
 
+
+
 /*---- INDIVIDUAL WORK PAGES ----*/
 .work-page-container {
     display: grid;
@@ -328,7 +329,7 @@ hr {
     position: sticky;
     top: 120px;
     padding: 60px 0;
-    color: #1B154D;
+    color: #401103;
 }
 
 .work-page-text h1 {
@@ -444,4 +445,56 @@ hr {
     text-decoration: none;
     font-size: 1rem;
     padding: 6px 10px;
+}
+
+
+/*---- MOBILE ----*/
+@media (max-width: 700px) {
+    .contact-item a { font-size: 1rem; }
+
+    /* Nav */
+    .nav-inner { padding: 12px 16px; }
+    .nav-right { gap: 20px; }
+
+    /* Home */
+    .home { min-height: 0; }
+    .title { margin-top: 40px; max-width: 100%; }
+
+    /* About */
+    .about-section {
+        grid-template-columns: 1fr;
+        margin: 40px 0 100px;
+        padding: 40px 24px;
+        gap: 0;
+    }
+
+    /* Selected work */
+    .selected-work-section { padding: 60px 24px 70px; }
+    .selected-work-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .view-all-link { margin-top: 50px; }
+
+    /* Contact */
+    .contact-section { padding: 0 24px; }
+
+    /* My Work page */
+    .work-titles { font-size: 2rem; margin-top: 90px; }
+    .work-container {
+        grid-template-columns: 1fr;
+        padding: 10px 24px;
+    }
+
+    /* Individual work pages */
+    .work-page-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0 24px 100px;
+    }
+    .work-page-text {
+        position: static;
+        padding: 30px 0 0;
+    }
+    .work-media { padding: 30px 0; }
 }

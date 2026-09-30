@@ -12,8 +12,8 @@ class MyNav extends HTMLElement {
                     <a href="${prefix}index.html" class="nav-left">OD</a>
 
                     <div class="nav-right">
-                        <a href="${prefix}index.html#about_id">ABOUT ME</a>
                         <a href="${prefix}pages/MyWork.html">MY WORK</a>
+                        <a href="${prefix}index.html#about_id">ABOUT ME</a>
                         <a href="${prefix}pages/OceaneDaumassonResume.pdf" target="_blank">RESUME</a>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 # Oceane Daumasson | Portfolio
  
-My personal portfolio, designed and built from scratch
+My personal portfolio, designed and built from scratch to showcase creative and technical work.
 
 ## Check it out here!
 **[Live site](https://oceanedaumasson.netlify.app)**

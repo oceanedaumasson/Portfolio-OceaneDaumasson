@@ -328,7 +328,7 @@ hr {
     gap: 60px;
     max-width: 1300px;
     margin: 50px auto 0;
-    padding: 0 40px 100px;
+    padding: 0 40px 30px;
     align-items: start;
 }
 
@@ -433,6 +433,70 @@ hr {
     grid-column: 1 / 4;
 }
 
+
+/* Design process */
+.design-process {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 120px;
+    color: #401103;
+}
+
+.design-process h4 {
+    text-align: left;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin: 0 0 2rem;
+    font-weight: 600;
+}
+
+.design-process ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+    align-items: start;
+}
+
+.design-process li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    row-gap: 6px;
+    align-items: end;       
+    align-content: start; 
+}
+
+.design-process li::before {
+    content: counter(step);
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: #b63f75;
+}
+
+.design-process h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 0.4rem;    /* nudges the title up to line up with the number's base */
+}
+
+.design-process p {
+    grid-column: 1 / -1;   /* text spans under both number and title */
+    font-size: 0.85rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    margin: 0;
+}
+
+
 /*---- WORK PAGE NAVIGATION ----*/
 .work-nav {
     position: fixed;
@@ -504,4 +568,7 @@ hr {
         padding: 30px 0 0;
     }
     .work-media { padding: 30px 0; }
+
+    .design-process { padding: 0 24px 120px; }
+    .design-process ol { grid-template-columns: 1fr; gap: 36px; }
 }

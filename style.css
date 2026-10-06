@@ -375,17 +375,17 @@ hr {
     display: inline-block;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #23446B;
+    color: #bd4e73;
     text-decoration: none;
     padding: 10px 20px;
-    border: 2px solid #23446B;
+    border: 2px solid #bd4e73;
     border-radius: 6px;
     margin-bottom: 1.5rem;
     transition: all 0.2s ease;
 }
 
 .work-page-text a:hover {
-    background-color: #23446B;
+    background-color: #bd4e73;
     color: white;
 }
 
@@ -496,7 +496,7 @@ hr {
     font-family: 'Playfair Display', serif;
     font-size: 4.5rem;
     line-height: 1;
-    color: #23446B;
+    color: #bd4e73;
 }
 
 .design-process h5 {
@@ -530,7 +530,7 @@ hr {
 }
 
 .next, .prev {
-    color: #23446B;
+    color: #bd4e73;
     text-decoration: none;
     font-size: 1rem;
     padding: 6px 10px;

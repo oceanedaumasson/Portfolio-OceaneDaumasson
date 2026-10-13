@@ -277,20 +277,24 @@ hr {
 
 
 /*---- MY WORK PAGE ----*/
-.work-titles {
+.work-titles, .work-title1 {
     font-size: 3vw;
-    margin-top: 100px;
+    margin-top: 40px;
     text-align: center;
     color: #401103;
     margin-bottom: 0;
 }
 
+.work-title1 {
+    margin-top: 100px;
+}
+
 .work-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 16px;
     max-width: 1100px;
-    padding: 40px 60px;
+    padding: 20px 60px;
     margin: 0 auto;
 }
 
@@ -449,6 +453,12 @@ hr {
     width: 55%;
     max-width: 380px;
     grid-column: 1 / 4;
+}
+
+.awards {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0.5rem 0 1rem;
 }
 
 
